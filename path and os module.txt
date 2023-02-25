@@ -1,0 +1,43 @@
+The node:path module provides utilites for working with file and directory paths. It can be accessed using:
+
+const path = require('node:path');
+
+path.basename('C:\\temp\\myfile.html');
+o/p: myfile.html
+
+for consistent results
+
+path.win32.basename('C:\\temp\\myfile.html');
+
+-------------
+path.basename('/foo/bar/baz/asdf/quux.html', '.html');
+// Returns: 'quux'
+
+------------
+
+path.parse(__filename)
+
+This is so much useful than direct result of __filename as it returns json
+
+{
+	root: '/'.
+	dir: '/users/....../parent_folderName'
+	base: 'app.js'(current filename)
+	ext: '.js'
+	name: 'app'
+}
+
+
+----------------------------------------------------------------------OS-----------------------------------------------------------------------------------------
+
+os.EOL (End of Line marker)
+
+The operating system-specific end-of-line marker.
+
+\n on POSIX
+\r\n on Windows
+
+
+os.arch (Returns the CPU architecture for which node.js binary was compiled.
+Possible values are 'arm', 'arm64', 'ia32', 'mips', 'mipsel', 'ppc', 'ppc64', 's390', 's390x', and 'x64'.
+

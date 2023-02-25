@@ -1,0 +1,25 @@
+To Export the modules to other files, means if you want to use the current file/module variables/methods in another file then you need to export them
+
+
+module.export.variablename = variable/method name
+
+to import from some file you need to use require method of js
+
+var logger = require('./filename')
+
+
+if you want to export only single function we can directly give like this
+module.export = method_name
+
+var method_name = require('./filename')
+
+method_name(params)
+
+Every module/file in js in node places inside a wrapper function called module wrapper function
+
+function (exports, require, module, __filename, __direname)
+
+---------------------
+__filename -- have the current file name and the path of it
+
+__dirname - have the path of currently where this js file present, means parent folder path of the current file
